@@ -4,6 +4,8 @@
 #include <cstddef>
 #include "config.hh"
 
+#define DEBUG true
+
 using namespace tinyxml2;
 
 config::config(){
@@ -34,11 +36,19 @@ config::config(){
       for(int i=0;i<_rackNum;i++){
         _stairVec.push_back(1);
       }
-      for(int i=0;i<_stairVec.size();i++) std::cout<<_stairVec[i]<<" ";
-      std::cout<<std::endl;
     }
   }
   _nodeNum=_rackNum*_nodePerRack;
+  if(DEBUG){
+    std::cout<<"loaded configurations:"<<std::endl;
+    std::cout<<"\tnodePerRack:"<<_nodePerRack<<std::endl;
+    std::cout<<"\trackNum:"<<_rackNum<<std::endl;
+    std::cout<<"\tglobalRate:"<<_globalRate<<std::endl;
+    std::cout<<"\tlocalRate:"<<_localRate<<std::endl;
+    std::cout<<"\terror vector:\n\t\t";
+    for(int i=0;i<_stairVec.size();i++) std::cout<<_stairVec[i]<<" ";
+    std::cout<<std::endl;
+  }
 }
 
 
