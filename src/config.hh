@@ -6,10 +6,7 @@
 #include <cstdlib>
 #include <cstring>
 
-#define STAIR 0
-#define RS 1
-#define LRC 2
-#define HCODE 3
+#include <vector>
 
 class config{
   public:
@@ -19,6 +16,9 @@ class config{
 
     double _localRate;
     double _globalRate;
+
+    std::vector<int> _stairVec;
+    config();
 };
 
 #endif

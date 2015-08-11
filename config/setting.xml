@@ -1,0 +1,7 @@
+<sysSetting>
+  <attribute> <name>rackNum</name> <value>8</value> </attribute>
+  <attribute> <name>nodePerRack</name> <value>7</value> </attribute>
+  <attribute> <name>localRate</name> <value>1000</value> </attribute>
+  <attribute> <name>globalRate</name> <value>50</value> </attribute>
+  <attribute> <name>stairVec</name> <value>1,1</value> </attribute>
+</sysSetting>
